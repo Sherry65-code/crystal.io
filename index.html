@@ -10,8 +10,15 @@
 <body>
     <img src="img.png" width="100%" alt="">
     <h1>Start our Invento OS from here</h1><br>
-    Note:- Kindly click this button only on your PC not on your mobile else your phone can hang as it is a very heavy program 
     <br><br><br>
     <a href="#"><button>Start</button></a>
+    <script>
+       var uagent = navigator.userAgent.toLowerCase();
+       if (uagent.search("linux"|"windows"|"mac") > -1)
+          console.warn("PC user");
+       else
+          document.body.innerHTML = "<h1>Sorry, you are using a mobile. Please switch to a PC to open this OS</h1>";
+        
+    </script>
 </body>
 </html>
